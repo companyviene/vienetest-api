@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: lessonviene_db
+    environment:
+      POSTGRES_DB: lessonviene
+      POSTGRES_USER: lessonviene
+      POSTGRES_PASSWORD: lessonviene
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lessonviene_app
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/lessonviene
+      SPRING_DATASOURCE_USERNAME: lessonviene
+      SPRING_DATASOURCE_PASSWORD: lessonviene
+    ports:
+      - "8083:8083"
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
