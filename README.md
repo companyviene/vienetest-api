@@ -17,8 +17,8 @@ This project is a Spring Boot application that uses PostgreSQL as its database. 
 
 ### Step 1: Clone the Repository
 
-git clone <your-repo-url>
-cd <your-repo-directory>
+git clone (https://github.com/companyviene/vienetest-api.git)
+cd vienetest-api
 
 ### Step 2: Build the Application
 Before running the Docker Compose, you need to build the Spring Boot application using Maven:
