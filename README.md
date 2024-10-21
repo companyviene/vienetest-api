@@ -1,4 +1,4 @@
-# Lessonviene Project
+# VieneTest-API Project
 
 This project is a Spring Boot application that uses PostgreSQL as its database. It is containerized using Docker Compose to manage both the application and database services.
 
